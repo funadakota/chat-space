@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.Side-bar {
+  background-color: #253141;
+  width: 300px;
+  height: 100vh;
+  &__User-names{    
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    &__Top-items{
+      width: 260px;
+      height: 20px;
+      display: flex;
+      justify-content: space-between;
+      &__Name{
+        font-size: 16px;
+        color: #ffffff;
+      }
+      &__Icon-list{
+        width: 60;
+        display: flex;
+        justify-content: end;
+        &__Icon{
+          color: #ffffff;
+          margin-left: 5px;
+          &__strong{
+            -webkit-font-smoothing: antialiased;
+            display: inline-block;
+            font-style: normal;
+            font-variant: normal;
+            text-rendering: auto;
+            line-height: 1;
+          }
+        }
+      }
+    }
+  }
+  &__Group-list{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+    overflow: scroll;
+    &__Group{
+      box-sizing: border-box;
+      padding: 20px 0 40px 0;
+      color: #333333;
+
+    }
+
+  }
+}
+
+.Chat-main {
+  background-color: #ffffff;
+  width: calc(100vw - 300px);
+  height: 100vh;
+  &__Group-info{
+    height: 100px;
+    padding: 0 40px;
+    border-bottom: solid 1px #eee;
+    display: flex;
+    justify-content: space-between;
+    &__Right-Header{
+      .Group-Name{
+        color: #333;
+        font-size: 20px;
+        margin-top: 35px;
+      }
+      .Member-list{
+        color: #999;
+        display: flex;
+        font-size: 12px;
+        margin-top: 15px;
+        &__Member{
+          padding-right: 5px;
+        }
+      }
+    }
+    .Edit-Button{
+      display: block;
+      border: 1px solid #38AEF0;
+      color: #38AEF0;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      text-decoration: none;
+    }
+    
+  }
+  &__Message-list{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 0 0 0 40px;
+    .Message-Info{
+      margin: 0 0 12px 0;
+      display: flex;
+      padding: 35px 0 0 0;
+      &__Name{
+        color: #333333;
+        font-size: 16px;
+      }
+      &__Date{
+        color: #999999;
+        font-size: 12px;
+        padding-left: 10px;
+      }
+    }
+    .Message{
+      margin: 12px 0 0 0;
+      &__content{
+        font-size: 14px;
+        color: #434A54;
+      }
+    }
+  }
+  &__Footer{
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+
+    .New_massage{
+      display: flex;
+      .Input-box{
+        width: 100%;
+        display: flex;
+        position: relative;
+        &__text{
+          height: 50px;
+          width: 100%;
+          color: #434a54;
+          border-style: none;
+          padding: 0 40px 0 10px;
+        }
+        &__image{
+          cursor: pointer;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          font-size: 1.3res;
+          &__file{
+            display: none;
+          }
+        }
+          
+      }
+      .Submit-btn{
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38AEF0;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}
