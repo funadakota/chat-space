@@ -1,0 +1,28 @@
+.Chat-main
+  .Chat-main__Group-info
+    .Chat-main__Group-info__Right-Header
+      .Group-Name
+        text
+      %ul.Member-list
+        Member
+        %li.Member
+    = link_to 'Edit', '#', class: "Edit-Button "
+  .Chat-main__Message-list
+    .Message-Info
+      .Message-Info__Name
+        kouta
+      .Message-Info__Date
+        08時37分
+    .Message
+      %p.Message__content
+        上
+  .Chat-main__Footer
+    %form.New_massage
+      .Input-box
+        %input{type: "text", class: "Input-box__text", placeholder: "type a message"}
+        %label{class: "Input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "Input-box__image__file"}
+      %input.Submit-btn{type: "submit"}
+      
+      
