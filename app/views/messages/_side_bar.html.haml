@@ -3,12 +3,19 @@
     .Side-bar__User-names
       .Side-bar__User-names__Top-items
         %h3.Side-bar__User-names__Top-items__Name
-          name
+          = current_user.name
         %ul.Side-bar__User-names__Top-items__Icon-list
           %li.Side-bar__User-names__Top-items__Icon-list__Icon
-            = icon("far", "edit", class: 'strong')
+            = link_to new_group_path do
+              = icon("far", "edit")
           %li.Side-bar__User-names__Top-items__Icon-list__Icon
-            = icon("fas", "cog", class: 'strong')
+            = link_to edit_user_path(current_user) do
+              = icon("fas", "cog")
     .Side-bar__Group-list
-      .Side-bar__Group-list__Group
-        test
+      - current_user.groups.each do |group|
+        .Side-bar__Group-list__Group
+          = link_to group_messages_path(group) do
+            .Side-bar__Group-list__Group__name
+              = group.name
+            .Side-bar__Group-list__Group__message
+              = group.show_last_message
