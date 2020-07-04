@@ -127,7 +127,7 @@
     height: 90px;
     padding: 20px 40px;
 
-    .New_massage{
+    .New-message{
       display: flex;
       .Input-box{
         width: 100%;
@@ -147,7 +147,7 @@
           right: 10px;
           font-size: 1.3res;
           &__file{
-            display: none;
+            font-size: 2em;
           }
         }
           
@@ -160,7 +160,18 @@
         background-color: #38AEF0;
         color: white;
         cursor: pointer;
+        border: none;
       }
     }
   }
 }
+
+a {
+text-decoration: none;
+color: white;
+}
+
+.Hidden {
+  display: none;
+}
+
