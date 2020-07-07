@@ -51,9 +51,9 @@ $(function(){
       dataType: 'json',
       processData: false,
       contentType: false
-      .fail(function() {
-        alert("メッセージ送信に失敗しました");
-      })
+    })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
     })
     .done(function(data){
       let html = buildHTML(data);
