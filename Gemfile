@@ -29,15 +29,12 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 group :development, :test do
- require "capistrano/setup"
- require "capistrano/deploy"
- require 'capistrano/rbenv'
- require 'capistrano/bundler'
- require 'capistrano/rails/assets'
- require 'capistrano/rails/migrations'
- require 'capistrano3/unicorn'
-
- Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 4.0.0.beta2'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
 end
 
 group :development do
@@ -71,4 +68,12 @@ gem 'jquery-rails'
 
 group :production do
   gem 'unicorn', '5.4.1'
+end
+
+group :development, :test do
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
