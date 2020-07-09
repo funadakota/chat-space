@@ -53,17 +53,16 @@ $(function(){
       contentType: false
     })
     .done(function(data){
+      console.log(data)
       let html = buildHTML(data);
       $('.Chat-main__Message-list').append(html);
       $('.Chat-main__Message-list').animate({ scrollTop: $('.Chat-main__Message-list')[0].scrollHeight});
-      $('form')[0].reset();
+      $('.New-message')[0].reset();
+      $('.Submit-btn').prop('disabled', false);
     })
     .fail(function() {
       alert("メッセージ送信に失敗しました");
     })
-    .always(function(data){
-      $("form").prop("disabled", false);
-    });
   });
 });
 
